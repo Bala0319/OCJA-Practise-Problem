@@ -1,0 +1,41 @@
+class boxDemo {
+double width;
+double height;
+double depth;
+ 
+boxDemo(double w, double h, double d) {
+width = w;
+height = h;
+depth = d;
+}
+boxDemo() {
+width = -1; 
+height = -1; 
+depth = -1; }
+ 
+boxDemo(double len) {
+width = height = depth = len;
+}
+ 
+double volume() {
+return width * height * depth;
+}
+}
+public class overloadDemo {
+public static void main(String args[]) {
+ 
+boxDemo ob1 = new boxDemo(5, 15, 25);
+boxDemo ob2 = new boxDemo();
+boxDemo ob3 = new boxDemo(5);
+double v;
+ 
+v = ob1.volume();
+System.out.println("volume of ob1 is " + v);
+ 
+v = ob2.volume();
+System.out.println("volume of ob2 is " + v);
+ 
+v = ob3.volume();
+System.out.println("volume of ob3 is " + v);
+}
+}
